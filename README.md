@@ -39,11 +39,9 @@ obligatoria.
 
 |
 | ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) 
-![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)
-<img src={./src/assets/mockups/FavoritesMockup.png} width="220px" />
-|
+![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)| Mockup |
 | 🎞️ Detalles de la pelicula           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) 
-![DetailsMockup](./src/assets/mockups/DetailsMockup.png)|
+![DetailsMockup](./src/assets/mockups/DetailsMockup.png)| Mockup |
 
 | 👥 Identifying the user             | [src/components/LoginForm/index.js](src/components/LoginForm/index.js) |
 | 🚪 Logging out the user             | [src/components/LogoutButton/index.js](src/components/LogoutButton/index.js) |
