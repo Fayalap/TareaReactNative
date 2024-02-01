@@ -38,10 +38,12 @@ obligatoria.
 ![SearchMockup](./src/assets/mockups/SearchMockup.png)
 
 |
-| ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) |
+| ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) 
 ![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)
-| 🎞️ Detalles de la pelicula           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) |
-![DetailsMockup](./src/assets/mockups/DetailsMockup.png)
+<img src={./src/assets/mockups/FavoritesMockup.png} width="220px" />
+|
+| 🎞️ Detalles de la pelicula           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) 
+![DetailsMockup](./src/assets/mockups/DetailsMockup.png)|
 
 | 👥 Identifying the user             | [src/components/LoginForm/index.js](src/components/LoginForm/index.js) |
 | 🚪 Logging out the user             | [src/components/LogoutButton/index.js](src/components/LogoutButton/index.js) |
