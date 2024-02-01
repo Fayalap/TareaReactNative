@@ -16,19 +16,27 @@ Esta tarea utiliza:
 
 ● La aplicación debe tener al menos tres pantallas: una pantalla de búsqueda, una de detalles
 de la película y favoritos.
+
 ● Al realizar una búsqueda, la aplicación debe llamar a la API de OMDB para obtener los
 resultados correspondientes al título ingresado.
+
 ● Los resultados deben mostrarse en una lista, donde cada elemento debe mostrar información
 relevante.
+
 ● Al hacer clic en un elemento, la aplicación debe mostrar la pantalla de detalles de la película
 correspondiente.
+
 ● Debes utilizar la API de OMDB para obtener los detalles adicionales de una película cuando
 se selecciona de la lista de resultados de búsqueda.
+
 ● Se deben poder agregar películas a una lista de favoritos y revisar su información.
+
 ● Diseño y UX no serán evaluados específicamente, sin embargo debe entenderse la
 información desplegada.
+
 ● Cualquier otra funcionalidad no mencionada se considera en la evaluación, pero no es
 obligatoria.
+
 ● Cualquier cosa no especificada queda a criterio del desarrollador.
 
 | Característica                   | Ubicación del proyecto de la muestra      |
