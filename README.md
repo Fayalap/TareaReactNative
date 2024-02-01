@@ -1,84 +1,80 @@
 <<<<<<< HEAD
 # TareaReactNative
 Prueba Técnica de React Native - API OMDB
-=======
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+Se debe realizar una aplicación móvil utilizando React Native en su última versión que muestre
+información sobre películas utilizando la API pública de OMDB (https://www.omdbapi.com/).
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Requisitos
 
-## Step 1: Start the Metro Server
+Esta tarea utiliza:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- React Native 0.73.3
+- Redux 5.0.1
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Competencias:
 
-```bash
-# using npm
-npm start
+● La aplicación debe tener al menos tres pantallas: una pantalla de búsqueda, una de detalles
+de la película y favoritos.
+● Al realizar una búsqueda, la aplicación debe llamar a la API de OMDB para obtener los
+resultados correspondientes al título ingresado.
+● Los resultados deben mostrarse en una lista, donde cada elemento debe mostrar información
+relevante.
+● Al hacer clic en un elemento, la aplicación debe mostrar la pantalla de detalles de la película
+correspondiente.
+● Debes utilizar la API de OMDB para obtener los detalles adicionales de una película cuando
+se selecciona de la lista de resultados de búsqueda.
+● Se deben poder agregar películas a una lista de favoritos y revisar su información.
+● Diseño y UX no serán evaluados específicamente, sin embargo debe entenderse la
+información desplegada.
+● Cualquier otra funcionalidad no mencionada se considera en la evaluación, pero no es
+obligatoria.
+● Cualquier cosa no especificada queda a criterio del desarrollador.
 
-# OR using Yarn
-yarn start
+| Característica                   | Ubicación del proyecto de la muestra      |
+| -------------------------------- | ----------------------------------------- |
+| 🕹 Configuring the *Purchases* SDK  | [App.js](App.js#L17) |
+| 🔍 Construyendo la busqueda        | [src/screens/SearchScreen/index.js](src/screens/SearchScreen/index.js) 
+![SearchMockup](./src/assets/mockups/SearchMockup.png)
+
+|
+| ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) |
+| 🎞️ Detalles de la pelicula           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) |
+| 👥 Identifying the user             | [src/components/LoginForm/index.js](src/components/LoginForm/index.js) |
+| 🚪 Logging out the user             | [src/components/LogoutButton/index.js](src/components/LogoutButton/index.js) |
+
+## Configurar y ejecutar
+
+### Requisitos previos
+- Asegurese de configurar correctamente las variables de entorno con Java Development Kit 17
+- Asegurese de obtener su [API key](https://www.omdbapi.com/apikey.aspx)
+
+### Pasos para ejecutar
+1. Descarga o clona este repositorio
+    > git clone https://github.com/Fayalap/TareaReactNative.git
+
+2. Asegúrese de tener [administrador de paquetes de node (npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) instalado en su máquina.
+
+3. Navegue al directorio `TareaReactNative` e instale las dependencias usando npm
+
+    ```
+    cd TareaReactNative
+    npm install
+    ```
+
+4. Ejecute la aplicación en un simulador o dispositivo físico.
+
 ```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### For iOS
+<img src="https://i.imgur.com/SSbRLhr.gif" width="220px" />
 
-```bash
-# using npm
-npm run ios
+## Soporte
 
-# OR using Yarn
-yarn ios
-```
+Para obtener más detalles técnicos, consulte hacia mi correo electronico francoyala.77@gmail.com
+o por llamada al +56988575861.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Creditos
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
->>>>>>> master
+Esta prueba tecnica de react native fue construida por Franco Ayala para NiuFoods.
