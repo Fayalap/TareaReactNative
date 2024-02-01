@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # TareaReactNative
 Prueba Técnica de React Native - API OMDB
 
@@ -40,9 +40,6 @@ obligatoria.
 |                                   | ![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)|
 | 🎞️ Detalles de la película           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) |
 |                                   | ![DetailsMockup](./src/assets/mockups/DetailsMockup.png)|
-| 👥 Identificación del usuario             | [src/components/LoginForm/index.js](src/components/LoginForm/index.js) |
-| 🚪 Cierre de sesión del usuario             | [src/components/LogoutButton/index.js](src/components/LogoutButton/index.js) |
-
 
 ## Configurar y ejecutar
 
