@@ -39,7 +39,10 @@ obligatoria.
 
 |
 | ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) |
+![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)
 | 🎞️ Detalles de la pelicula           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) |
+![DetailsMockup](./src/assets/mockups/DetailsMockup.png)
+
 | 👥 Identifying the user             | [src/components/LoginForm/index.js](src/components/LoginForm/index.js) |
 | 🚪 Logging out the user             | [src/components/LogoutButton/index.js](src/components/LogoutButton/index.js) |
 
@@ -68,7 +71,6 @@ obligatoria.
 npm run android
 ```
 
-<img src="https://i.imgur.com/SSbRLhr.gif" width="220px" />
 
 ## Soporte
 
