@@ -41,7 +41,6 @@ obligatoria.
 
 | Característica                   | Ubicación del proyecto de la muestra      |
 | -------------------------------- | ----------------------------------------- |
-| 🕹 Configuración del SDK *Purchases*  | [App.js](App.js#L17) |
 | 🔍 Construyendo la búsqueda        | [src/screens/SearchScreen/index.js](src/screens/SearchScreen/index.js) |
 |                                   | ![SearchMockup](./src/assets/mockups/SearchMockup.png)|
 | ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) |
