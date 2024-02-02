@@ -7,7 +7,6 @@ export default async function fetchDataSearch(nameFilm) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error al obtener datos de la API:", error);
     throw error;
   }
 }

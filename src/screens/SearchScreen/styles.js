@@ -9,6 +9,15 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  textCarousel:{
+    marginTop:12,
+    marginBottom:6,
+    fontSize:16,
+    fontWeight:"800",
+    color:"black",
+    textAlign:"left",
+    width:"90%"
+  },
   text: {
     color: 'lightgrey',
   },
@@ -40,13 +49,18 @@ const styles = StyleSheet.create({
     height:27,
   },
   coverFilmContainer:{
-    width:"80%",
-    height:500,
+    width:"60%",
+    height:280,
 
   },
   coverFilm:{
     width:"100%",
     height:"100%",
+  },
+  poster: {
+    width: 100,
+    height: 150,
+    marginHorizontal: 5,
   },
   headerFooterContainer: {
     marginVertical: 10,

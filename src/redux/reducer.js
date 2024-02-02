@@ -1,14 +1,23 @@
-import {RESET, SET_DATA} from './contants';
+import {RESET, SET_DATA, GET_DATA} from './contants';
 
 let initialState = {
-  favorites: {},
-  films: {},
+  favorites: [],
+  films: [],
 };
 
 const rootReducer = (state = initialState, actions) => {
   switch (actions.type) {
-    case SET_DATA:
+    case GET_DATA:
       return {...state, films: actions.payload};
+    case SET_DATA:
+      const exists = state.films.some(
+        film => film.Title === actions.payload.Title,
+      );
+      if (!exists) {
+        const updatedFilms = [...state.films, actions.payload];
+        return {...state, films: updatedFilms};
+      }
+      return state;
     case RESET:
       return {...initialState};
     default:
