@@ -4,30 +4,41 @@ import styles from './styles'
 import { useState } from 'react'
 import images from '../../assets/images'
 import fetchDataSearch from '../../services/fetchDataSearch'
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addFilm, reset } from '../../redux/actions'
 import MoviePosterCarousel from '../../components/MoviePosterCarousel/MoviePosterCarousel'
+import { useNavigation } from '@react-navigation/native';
 
 export default function SearchScreen() {
   const dispatch=useDispatch()
+  const navigation=useNavigation();
+
+  // - Estado del texto de input.
   const [searchText,setSearchText]=useState();
+  // - Estado de la ultima pelicula buscada.
   const [filmSearch,setFilmSearch]=useState(null);
+  // Obtenemos todas las películas buscadas anteriormente utilizando el estado global de Redux.
   const films=useSelector(state=>state.films)
+
+// Realizamos una llamada a la API utilizando el servicio fetchDataSearch.
+// Después de obtener la respuesta, actualizamos el estado local y global con los datos de la película.
   async function getFilm() {
     try {
       const response = await fetchDataSearch(searchText);
-      console.log(response);
       setFilmSearch(response);
       dispatch(addFilm(response));
     } catch (error) {
       console.error('Error al obtener datos de la API:', error);
     }
   }
-  useEffect(()=>{
-    console.log(filmSearch);
-    console.log(films.length)
-  },[filmSearch])
+
+  function navigateDetail() {
+    navigation.replace("DetailsScreen", { 
+      props: {
+        "film":filmSearch,
+      }
+    })
+  }
 
   return (
     <ScrollView style={styles.scrollContainer}>
@@ -45,10 +56,12 @@ export default function SearchScreen() {
           </TouchableOpacity>
         </View>
         {filmSearch&&<Text>{filmSearch.Title}+"hola"</Text>}
-        {filmSearch&&<TouchableOpacity style={styles.coverFilmContainer}>
+        {filmSearch&&<TouchableOpacity style={styles.coverFilmContainer} onPress={navigateDetail}>
         <Image source={{uri:filmSearch.Poster}} style={styles.coverFilm} />
         </TouchableOpacity>}
+        <View>
         <Text style={styles.textCarousel}>Busquedas Recientes</Text>
+        </View>
         <MoviePosterCarousel movies={films}/>
         <Text style={styles.textCarousel}>Favoritos</Text>
 
