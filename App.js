@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import Router from './src/navigation/Router'
+import { Provider } from 'react-redux';
+import { store } from './src/redux/store';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hola Mundo</Text>
-    </View>
+    <Provider store={store}>
+      <Router/>
+    </Provider>
   )
 }
 
-export default App
+export default App;

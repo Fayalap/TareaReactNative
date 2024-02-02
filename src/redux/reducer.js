@@ -1,8 +1,8 @@
 import {RESET, SET_DATA} from './contants';
 
 let initialState = {
-  favorites: [],
-  films: [],
+  favorites: {},
+  films: {},
 };
 
 const rootReducer = (state = initialState, actions) => {

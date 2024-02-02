@@ -1,4 +1,3 @@
-
 # TareaReactNative
 Prueba Técnica de React Native - API OMDB
 
@@ -44,10 +43,12 @@ obligatoria.
 | 🕹 Configuración del SDK *Purchases*  | [App.js](App.js#L17) |
 | 🔍 Construyendo la búsqueda        | [src/screens/SearchScreen/index.js](src/screens/SearchScreen/index.js) |
 |                                   | ![SearchMockup](./src/assets/mockups/SearchMockup.png)|
-| ❤️ Sección Favoritos           | [src/screens/FavoritesScreen/index.js](src/screens/FavoritesScreen/index.js) |
+| ❤️ Sección Favoritos           | [src/screens/ListScreen/index.js](src/screens/ListScreen/index.js) |
 |                                   | ![FavoritesMockup](./src/assets/mockups/FavoritesMockup.png)|
 | 🎞️ Detalles de la película           | [src/screen/DetailsScreen/index.js](src/screen/DetailsScreen/index.js) |
 |                                   | ![DetailsMockup](./src/assets/mockups/DetailsMockup.png)|
+
+
 
 ## Configurar y ejecutar
 
