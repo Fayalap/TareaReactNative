@@ -13,7 +13,7 @@ export default function DetailsScreen() {
       <View style={styles.container}>
       <TopBar/>
       {film&&<View style={styles.posterContainer}>
-        <Image style={styles.poster} source={{uri:film.Poster}}/>
+      {film&&<Image style={styles.poster} source={{uri:film.Poster}}/>}
         </View>}
       <Text style={styles.textTitle}>{film.Title}</Text>
       <Text style={styles.text}>{film.Released}</Text>

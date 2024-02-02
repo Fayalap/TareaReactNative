@@ -1,4 +1,4 @@
-import { View, Text,ScrollView,TextInput, Image, TouchableOpacity,FlatList } from 'react-native'
+import { View, Text,ScrollView,TextInput, Image, TouchableOpacity,FlatList, Button } from 'react-native'
 import React from 'react'
 import styles from './styles'
 import { useState } from 'react'
@@ -19,6 +19,8 @@ export default function SearchScreen() {
   const [filmSearch,setFilmSearch]=useState(null);
   // Obtenemos todas las películas buscadas anteriormente utilizando el estado global de Redux.
   const films=useSelector(state=>state.films)
+  // Obtenemos todas las películas favoritas utilizando el estado global de Redux.
+  const favorites=useSelector(state=>state.favorites)
 
 // Realizamos una llamada a la API utilizando el servicio fetchDataSearch.
 // Después de obtener la respuesta, actualizamos el estado local y global con los datos de la película.
@@ -35,7 +37,17 @@ export default function SearchScreen() {
   function navigateDetail() {
     navigation.replace("DetailsScreen", { 
       props: {
-        "film":filmSearch,
+        film:filmSearch,
+      }
+    })
+  }
+
+  function navigateList(bolean) {
+    navigation.replace("ListScreen", { 
+      props: {
+        isFavoriteScreen: bolean,
+        films:films,
+        favorites:favorites,
       }
     })
   }
@@ -59,13 +71,20 @@ export default function SearchScreen() {
         {filmSearch&&<TouchableOpacity style={styles.coverFilmContainer} onPress={navigateDetail}>
         <Image source={{uri:filmSearch.Poster}} style={styles.coverFilm} />
         </TouchableOpacity>}
-        <View>
+        <View style={styles.containerTitleCarousel}>
         <Text style={styles.textCarousel}>Busquedas Recientes</Text>
+        <TouchableOpacity onPress={()=>{navigateList(false)}} style={styles.button}>
+          <Text style={styles.buttonText}>Ver todo</Text>
+        </TouchableOpacity>        
         </View>
         <MoviePosterCarousel movies={films}/>
+        <View style={styles.containerTitleCarousel}>
         <Text style={styles.textCarousel}>Favoritos</Text>
-
-        <MoviePosterCarousel movies={films}/>
+        <TouchableOpacity onPress={()=>{navigateList(true)}} style={styles.button}>
+          <Text style={styles.buttonText}>Ver todo</Text>
+        </TouchableOpacity>        
+        </View>
+        <MoviePosterCarousel movies={favorites}/>
 
       </View>
     </ScrollView>

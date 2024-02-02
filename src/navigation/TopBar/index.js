@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles';
 import images from '../../assets/images';
 import { useNavigation } from '@react-navigation/native';
-const TopBar = () => {
+const TopBar = ({isFavoriteScreen}) => {
   const navigation=useNavigation();
 
   function navigateBack() {
@@ -13,10 +13,11 @@ const TopBar = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity styles={styles.backImageContainer} onPress={navigateBack}>
-      <Image styles={styles.backImage} source={images.back} />
+      <TouchableOpacity style={styles.backImageContainer} onPress={navigateBack}>
+      <Image style={styles.backImage} source={images.back} />
+      <Text style={styles.textBack}>Atrás</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>TopBar</Text>
+      <Text style={styles.text}>{isFavoriteScreen?"Favoritos":"Busquedas recientes"}</Text>
     </View>
   )
 }
