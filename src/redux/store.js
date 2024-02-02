@@ -1,4 +1,4 @@
-import {createStore, applyMiddleware, compose} from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducer';
 import {persistStore, persistReducer} from 'redux-persist';
@@ -9,7 +9,7 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const persistConfig = {
   key: 'root',
-  storage: AsyncStorage, // Configura AsyncStorage como el motor de almacenamiento
+  storage: AsyncStorage,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
