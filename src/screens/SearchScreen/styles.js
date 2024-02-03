@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:"center",
     justifyContent:"center",
+    paddingBottom:10
   },
   scrollView:{
     width: '100%',
@@ -16,12 +17,18 @@ const styles = StyleSheet.create({
     justifyContent:"space-between"
   },
   textCarousel:{
-    marginTop:12,
-    marginBottom:6,
-    fontSize:16,
+    marginTop:16,
+    fontSize:18,
     fontWeight:"800",
     color:"black",
     textAlign:"left",
+  },
+  textNotFilm:{
+    marginTop:"50%",
+    fontSize:18,
+    fontWeight:"800",
+    color:"black",
+    textAlign:"center",
   },
   text: {
     color: 'lightgrey',
@@ -59,6 +66,14 @@ const styles = StyleSheet.create({
     height:360,
 
   },
+  coverNotFilmContainer:{
+    marginTop:10,
+    width:180,
+    height:280,
+    borderWidth:2,
+    borderColor:"gray",
+    borderRadius:6,
+  },
   coverFilm:{
     width:"100%",
     height:"100%",
@@ -90,7 +105,7 @@ const styles = StyleSheet.create({
     borderRadius:4
   },
   buttonText:{
-    fontSize:12,
+    fontSize:13,
     fontWeight:"800",
     color:"white",
     textAlign:"center",

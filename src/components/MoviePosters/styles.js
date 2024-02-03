@@ -1,4 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+const {width} = Dimensions.get('window');
+const itemWidth = width / 3;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -20,14 +23,18 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
   },
+  posterContainer:{
+    marginTop:10,
+
+  },
   poster: {
-    width: 100,
-    height: 150,
-    marginHorizontal: 5,
+    width: itemWidth - 14,
+    height: 180,
+    marginHorizontal: 4,
   },
   text: {
     marginTop: 40,
-    fontSize: 14,
+    fontSize: 12,
     width: 80,
     marginHorizontal: 6,
     fontWeight: "400",

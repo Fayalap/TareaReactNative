@@ -15,7 +15,7 @@ const persistConfig = {
   storage: AsyncStorage,
 };
 
-// Reducer persistido que aplica la configuración de persistencia al rootReducer
+// Reducer que aplica la configuración de persistencia al rootReducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = createStore(persistedReducer, enhancer);

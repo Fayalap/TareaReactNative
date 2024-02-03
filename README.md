@@ -9,7 +9,7 @@ información sobre películas utilizando la API pública de OMDB (https://www.om
 Esta tarea utiliza:
 
 - React Native 0.73.3
-- Redux 5.0.1
+- Redux 4.2.1
 
 ## Competencias:
 

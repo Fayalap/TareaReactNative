@@ -4,5 +4,6 @@ export default {
   corazonBlanco: require('./corazonBlanco.png'),
   lupa: require('./lupaImagen.png'),
   back: require('./back.png'),
+  enviarCorreo: require('./enviarCorreo.png'),
 
 };

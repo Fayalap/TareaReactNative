@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     alignItems:"center",
   },
   text: {
-    fontSize:17,
+    fontSize:18,
     fontWeight:"800",
     color:"black",
     width:"100%",
     textAlign:"center",
   },
   textBack: {
-    fontSize:16,
+    fontSize:17,
     fontWeight:"800",
     color:"black",
     textAlign:"center",
