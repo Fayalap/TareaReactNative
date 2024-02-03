@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     alignItems:"center",
   },
   text: {
-    fontSize:16,
+    fontSize:17,
     fontWeight:"800",
     color:"black",
     width:"100%",
@@ -21,15 +21,15 @@ const styles = StyleSheet.create({
     textAlign:"center",
   },
   backImageContainer:{
-    flexDirection:"row",
-    width:40,
+    width:60,
     height:40,
+    flexDirection:"row",
     alignItems:"center",
 
   },
   backImage:{
-    width:"90%",
-    height:"90%",
+    width:"70%",
+    height:"70%",
   }
 });
 export default styles;

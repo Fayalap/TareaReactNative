@@ -54,8 +54,9 @@ const styles = StyleSheet.create({
     height:27,
   },
   coverFilmContainer:{
-    width:"60%",
-    height:280,
+    marginTop:10,
+    width:240,
+    height:360,
 
   },
   coverFilm:{
@@ -82,18 +83,18 @@ const styles = StyleSheet.create({
   },
   button:{
     backgroundColor:"red",
-    width:66,
-    height:22,
+    width:74,
+    height:25,
     alignItems:"center",
     justifyContent:"center",
     borderRadius:4
   },
   buttonText:{
-    fontSize:14,
+    fontSize:12,
     fontWeight:"800",
     color:"white",
     textAlign:"center",
-    width:"90%"
+    width:"100%"
   },
 });
 

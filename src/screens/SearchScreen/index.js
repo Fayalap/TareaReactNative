@@ -1,11 +1,11 @@
-import { View, Text,ScrollView,TextInput, Image, TouchableOpacity,FlatList, Button } from 'react-native'
+import { View, Text,ScrollView,TextInput, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './styles'
 import { useState } from 'react'
 import images from '../../assets/images'
 import fetchDataSearch from '../../services/fetchDataSearch'
 import { useDispatch, useSelector } from 'react-redux'
-import { addFilm, reset } from '../../redux/actions'
+import { addFilm } from '../../redux/actions'
 import MoviePosterCarousel from '../../components/MoviePosterCarousel/MoviePosterCarousel'
 import { useNavigation } from '@react-navigation/native';
 
@@ -34,6 +34,8 @@ export default function SearchScreen() {
     }
   }
 
+  // Al seleccionar la pelicula buscada nos redirigimos para ver sus detalles a DetailsScreen,
+  // pasandole por props esta misma.
   function navigateDetail() {
     navigation.replace("DetailsScreen", { 
       props: {
@@ -42,12 +44,16 @@ export default function SearchScreen() {
     })
   }
 
+  
+  // Al seleccionar el botón "Ver todo", nos redirigimos a ListScreen
+  // donde veremos todas las películas del menú seleccionado.
+  // Recibe un booleano que, cuando es verdadero, muestra la lista de películas favoritas,
+  // y cuando es falso, muestra la lista de las películas buscadas recientemente. 
   function navigateList(bolean) {
     navigation.replace("ListScreen", { 
       props: {
         isFavoriteScreen: bolean,
         films:films,
-        favorites:favorites,
       }
     })
   }
@@ -67,7 +73,6 @@ export default function SearchScreen() {
           <Image style={styles.imageInput} source={images.lupa}/>
           </TouchableOpacity>
         </View>
-        {filmSearch&&<Text>{filmSearch.Title}+"hola"</Text>}
         {filmSearch&&<TouchableOpacity style={styles.coverFilmContainer} onPress={navigateDetail}>
         <Image source={{uri:filmSearch.Poster}} style={styles.coverFilm} />
         </TouchableOpacity>}

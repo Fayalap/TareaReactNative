@@ -1,10 +1,4 @@
-import {
-  RESET,
-  SET_DATA,
-  GET_DATA,
-  ADD_FAVORITE,
-  REMOVE_FAVORITE,
-} from './contants';
+import {RESET, ADD_FILM, ADD_FAVORITE, REMOVE_FAVORITE} from './contants';
 
 let initialState = {
   favorites: [],
@@ -13,9 +7,7 @@ let initialState = {
 
 const rootReducer = (state = initialState, actions) => {
   switch (actions.type) {
-    case GET_DATA:
-      return {...state, films: actions.payload};
-    case SET_DATA:
+    case ADD_FILM:
       const exists = state.films.some(
         film => film.Title === actions.payload.Title,
       );
